@@ -38,6 +38,10 @@
 						@endforeach
 					</select>
 				  </div>
+				  <div class="form-group">
+					<label for="price">Price per hour</label>
+					<input type="text" class="form-control" value="{{$editConsultation->price}}" id="price" name="price" placeholder="price">
+				  </div>
 
 				  <div class="form-group">
 					<label>Consultation Image</label>

@@ -41,7 +41,7 @@ class User extends Authenticatable
     //     return $this->hasMany(Subscription::class);
     // }
      public function subscription(){
-        return $this->belongsToMany(Subscription::class, 'subscription_user'); 
+        return $this->belongsToMany(Subscription::class, 'Subscription'); 
     }
     
 

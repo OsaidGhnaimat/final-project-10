@@ -38,8 +38,7 @@
 						Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
 					</p>
 					<div class="form">
-						<input class="form-control" placeholder="Email goes here">
-						<button class="btn">Submit</button>
+						
 					</div>
 				</div>
 			</div>
@@ -48,10 +47,8 @@
 	<div class="container copyright">
 		<div class="row">
 			<div class="col-md-6">
-				<p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
 			</div>
 			<div class="col-md-6">
-				<p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
 			</div>
 		</div>
 	</div>

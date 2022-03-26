@@ -11,7 +11,7 @@
 		  <div class="card">
 			<div class="card-body">
 			  <h4 class="card-title">Manage Expert</h4>
-			  <form class="forms-sample" action="{{ route('expert.update', $editExpert->id) }}" method="POST" enctype="multipart/form-data" >
+			  <form class="forms-sample" action="{{ route('expertd.update', $editExpert->id) }}" method="POST" enctype="multipart/form-data" >
 				@csrf
 				<div class="form-group">
 				  <label for="expert_name">Name</label>
@@ -39,11 +39,11 @@
 					<label for="experience">Experience</label>
 					<textarea class="form-control" id="experience" name="experience" rows="4" maxlength="250">{{$editExpert->experience}}</textarea>
 				  </div>
-				  <div class="form-group">
+				  {{-- <div class="form-group">
 					<label for="price_per_hours">Price Per Hours</label>
 					<input type="number" class="form-control" id="price_per_hours" name="price_per_hours" rows="4" required
 					value="{{$editExpert->price_per_hours}}"> 
-				  </div>
+				  </div> --}}
 				  <div class="form-group">
 					<label>Expert image</label>
 					<input type="file" name="expert_img" class="file-upload-default">
@@ -54,6 +54,7 @@
 						</span>
 				  	</div>
 				</div>
+				<input type="hidden" name="role_id" value="3">
 				<input type="hidden" name="_method" value="PUT">
 				<button type="submit" name="submit" class="btn btn-primary mr-2">Update</button>
 			  </form>

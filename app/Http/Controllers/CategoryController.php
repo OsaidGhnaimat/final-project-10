@@ -109,6 +109,7 @@ class CategoryController extends Controller
 
 
     public function singleConsultation($id){
+    
         $consultation = Consultation::find($id);
         $comments   = Comment::where('consultation_id', $id)->get();
         return view('public/single-consultation', compact('consultation','comments'));

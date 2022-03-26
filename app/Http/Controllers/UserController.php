@@ -12,8 +12,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::all();
-
+        $users = User::where('role_id', 1)->get();
         return view('dashboard.users.index', compact('users'));
 
     }
@@ -47,7 +46,7 @@ class UserController extends Controller
                     "role_id"   => $request->role_id,
                     "user_name" => $request->user_name,
                     "email"     => $request->email,
-                    "password"  => $request->password,
+                    "password"  => bcrypt($request->password),
                     "user_img"  => './uploads/' . $new_file,
                 ]);
         }else{
@@ -67,9 +66,12 @@ class UserController extends Controller
     public function showProfile()
     {
         $user = Auth::user();
-        // many to many 
-        // $Subscriptions = Subscription::where('user_id', $user->id)->get();
-        return view('public.userProfile', compact('user'));
+        $Subscriptions = Subscription::where('user_id', $user->id)->get();
+        // echo '<pre>';
+        // print_r($Subscriptions);
+        // echo '</pre>';
+        // die;
+        return view('public.userProfile', compact('user', 'Subscriptions'));
     }
 
    
@@ -93,7 +95,7 @@ class UserController extends Controller
         }
         $userUpdate->user_name = $request->user_name ;
         $userUpdate->email     = $request->email ;
-        $userUpdate->password  = $request->password ;
+        $userUpdate->password  = bcrypt($request->password) ;
         
         $userUpdate->update();
         return redirect()->route('user.index');

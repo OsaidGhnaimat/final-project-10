@@ -17,7 +17,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -27,7 +26,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -37,7 +35,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -47,7 +44,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -57,7 +53,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -67,7 +62,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -77,7 +71,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -87,7 +80,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +128,7 @@
                 <div class="row align-items-end">
                     <div class="col-md-6">
                         <div class="feature-img">
-                            <img src="img/business-man.png" alt="Image">
+                            <img src="img/mypic.png" alt="Image">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -151,29 +143,29 @@
                             <div class="col-6">
                                 <i class="fa fa-user"></i>
                                 <div class="counters-text">
-                                    <h2 data-toggle="counter-up">100</h2>
+                                    <h2 data-toggle="counter-up">{{$countExpert}}</h2>
                                     <p>Our Staffs</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <i class="fa fa-users"></i>
                                 <div class="counters-text">
-                                    <h2 data-toggle="counter-up">200</h2>
+                                    <h2 data-toggle="counter-up">{{$countUser}}</h2>
                                     <p>Our Clients</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <i class="fa fa-check"></i>
                                 <div class="counters-text">
-                                    <h2 data-toggle="counter-up">300</h2>
-                                    <p>Completed Projects</p>
+                                    <h2 data-toggle="counter-up">{{$countSubscription}}</h2>
+                                    <p>Subscriptions</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <i class="fa fa-running"></i>
                                 <div class="counters-text">
-                                    <h2 data-toggle="counter-up">400</h2>
-                                    <p>Running Projects</p>
+                                    <h2 data-toggle="counter-up">{{$countConsultation}}</h2>
+                                    <p>Consultations available</p>
                                 </div>
                             </div>
                         </div>

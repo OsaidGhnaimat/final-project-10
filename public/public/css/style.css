@@ -668,7 +668,7 @@ a:focus {
 .service {
     position: relative;
     width: 100%;
-    padding: 45px 0 15px 0;
+    padding: 0px 0 15px 0;
 }
 
 .service .service-item {
@@ -776,7 +776,9 @@ a:focus {
 @media (max-width: 767.98px) {
     .feature .feature-img {
         margin-bottom: 45px;
+        width: 90%;
     }
+    
 }
 
 .feature .counters .col-6 {
@@ -1771,8 +1773,8 @@ a:focus {
     background:#fcfcfc;
     border: solid 1px rgb(187, 187, 187);
     width: 100%;
-    height: 330px;
-    min-height: 330px;
+    height: 250px;
+    min-height: 250px;
     max-height: 330px;
     margin: auto;
     padding: 30px;
@@ -1800,6 +1802,7 @@ a:focus {
 .btn-booking{
     width: 300px;
     height: 50px;
+    font-size: 25px;
     align-self: flex-end ;
     text-align: center;
     background: #4b92ee;
@@ -2022,4 +2025,313 @@ box-shadow: 1px -1px 2px 0px rgba(0,0,0,0.20);
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
+}
+.head-profil{
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 50px;
+    color: rgb(90, 90, 90);
+}
+.subscribtions-card{
+    width: 70%;
+    height: 200px;
+    margin: 20px;
+    border: solid 1px rgb(196, 196, 196);
+    overflow: hidden;
+    /* border-radius: 20px; */
+}
+.subscribtions-card img{
+    width: 250px;
+    max-width: 250px;
+    height: 100%;
+    object-fit: cover;
+}
+.subscribtions-card h3{
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #6d6d6d;
+    width: 100%;
+    height: 100%;
+
+}
+.subscribtions-card p{
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 800px) {
+   .container-profil{
+       flex-direction: column;
+       justify-content: center;
+   }
+   .userProfile-img{
+    width: 200px;
+    height: 200px;
+   }
+   .form-profil-user{
+       width: 90%;
+   }
+  }
+/************ Search bar ********/
+.search-bar-public{
+    width: 500px !important;
+    margin-left: 5rem!important;
+    height: 90%;
+}
+.search-bnt-public{
+    height: 90%;
+    background-color: #092a49;
+    color: white;
+    border: solid 1px white;
+}
+
+.search-bnt-public:hover{
+    
+    color: #4b92ee;
+   
+}
+ 
+@media (max-width: 800px) {
+    .search-bar-public{
+        width: 100px !important;
+        margin-left: 5rem!important;
+        height: 50%;
+    }
+    .search-bnt-public{
+        height: 50%;
+ 
+    }
+  }
+
+/**************CheckOut***************/
+
+
+.row-checkout {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-50-checkout {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-25-checkout,
+  .col-50-checkout,
+  .col-75-checkout {
+    padding: 0 16px;
+  }
+  
+  /* .container-checkout {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  } */
+  
+  .row-checkout input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .row-checkout label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn-checkout {
+    background-color: #092a49;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn-checkout:hover {
+    background-color: rgb(168, 168, 168);
+    color: #092a49;
+   
+  }
+  .form-checkout{
+      width: 50%;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+  .checkout-price{
+      background-color: #0d41729c;
+      color: white;
+      width: 50%;
+      margin: auto;
+      text-align: center;
+      font-size: larger;
+  }
+  .price-checkout{
+      font-weight: bold;
+  }
+  .form-checkout .err-mess-checkout{
+      color: red;
+      font-size: medium;
+      margin-bottom: 20px;
+  
+}
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row-checkout {
+      flex-direction: column-reverse;
+    }
+    .form-checkout{
+        width: 98%;
+    }
+  }
+
+
+/***********succecc-booking**************/
+.succecc-booking{
+    display: block;
+    font-size: 35px;
+    text-align: center;
+    vertical-align: middle;
+    width: 40%;
+    height: 18vh;
+    margin: 100px auto 150px auto;
+}
+.container-icon-home{
+    display: block;
+    width: 100px;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .succecc-booking{
+        font-size: 15px;
+        text-align: center;
+        vertical-align: middle;
+        width: 60%;
+        height: 12vh;
+        margin: 100px auto 150px auto;
+    }
+  }
+/**************home bage btn****************/
+.home-btn{
+background:    #576b7e8e;
+border: 1px solid #ffffff63;
+border-radius: 0px;
+padding:       29px 54px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal bold 26px/1 "Pagella", serif;
+text-align:    center;
+}
+
+.home-btn:hover{
+    background:    #ffffffc0;
+    color:         #001d38;
+}
+  /******** expert register ******/
+  .register-expert-btn{
+      background-color: #092a49;
+      color: white;
+      width: 150px;
+  }
+
+  .register-expert-btn:hover{
+    background-color: #0d41729c;
+    color: white;
+}
+
+/***************** resgister  *******************/
+
+.login-style{
+    margin: 75px 0 75px 0 ;
+    height: 40vh;
+    
+}
+
+.btn-login{
+    background-color: #092a49;
+    color: white;
+}
+.btn-login:hover,.register-btn:hover,.btn-subscribtions:hover{
+    background-color: #0d41729c;
+    color: white;
+}
+
+.card-header,.register-btn{
+    background-color: #092a49;
+    color: white;
+}
+
+.register-style{
+    margin: 50px 0 50px 0 ;
+}
+.register-btn{
+    background-color: #092a49;
+    color: white;
+}
+
+.card-title-register-expert{
+    background-color: #092a49;
+    color: white;
+    padding: 20px;
+    border-radius: 0px 50px 0px 0px;
+    
+}
+.already-login{
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+}
+.ling-register{
+    text-decoration: underline
+}
+
+.container-expert-edit-cons{
+    margin: 100px 0 100px 0;
+}
+
+.head-expert-edit-cons{
+    background-color: #092a49;
+    color: white;
+    padding: 20px;
+    border-radius: 0px 50px 0px 0px;
+}
+
+.div-btn-add{
+    margin-top:90px ;
+    width: 100%;
+}
+
+.div-btn-add button{
+    padding: 15px;
+    font-size: 30px;
+}
+
+.div-info-consult{
+    width: 100%;
+}
+.btn-subscribtions{
+    width: 150x;
+    margin-left: 10px;
+    background-color: #092a49;
+    color: white;
 }

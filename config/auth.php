@@ -17,6 +17,10 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
+    'expert' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Expert::class,
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -39,6 +43,10 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+        'expert' => [
+            'driver' => 'session',
+            'provider' => 'experts',
         ],
     ],
 
@@ -69,6 +77,10 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        'experts' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Expert::class,
+        ],
     ],
 
     /*
@@ -92,6 +104,10 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
+        ],
+        'experts' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Expert::class,
         ],
     ],
 

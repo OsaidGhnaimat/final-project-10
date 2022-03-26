@@ -13,28 +13,19 @@ class CreateSubscriptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('subscriptions', function (Blueprint $table) {
-            $table->id();
-            $table->string('type');
-            // $table->foreignId('consultation_id')->constrained();
-            $table->foreignId('consultation_id')->nullable()
-            ->unsigned()
-            ->references('id')
-            ->on('consultations')
-            ->onDelete('cascade');
-
-            // $table->foreignId('user_id')->constrained();
-
-            $table->foreignId('user_id')->nullable()
-            ->unsigned()
-            ->references('id')
-            ->on('users')
-            ->onDelete('cascade');
-            
-            $table->string('total_price');
+        Schema::create('subscriptions', function (Blueprint $table) {     
+//            // $table->foreignId('consultation_id')->nullable()
+ //           $table->foreignId('user_id')->constrained();
+            $table->increments('id');
+            $table->unsignedBigInteger('consultation_id');
+            $table->unsignedBigInteger('user_id');
+            // $table->integer('consultation_id')->unsigned();
+            $table->foreign('consultation_id')->references('id')->on('consultations')->onDelete('cascade');
+            // $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
-        });
-    }
+});
+}
 
     /**
      * Reverse the migrations.

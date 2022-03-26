@@ -21,10 +21,10 @@
 				  <thead>
 					<tr>
 					  <th>#</th>
-					  <th>Subscription Type</th>
+					  {{-- <th>Subscription Type</th> --}}
 					  <th>User Id</th>
 					  <th>Consultation Id</th>
-					  <th>Total Price</th>
+					  {{-- <th>Total Price</th> --}}
 					  <th>Date</th>
 					  <th>Setting</th>
 					</tr>
@@ -37,18 +37,18 @@
 							{{$subscription->id}}
 					  </td>
 					  
-					  <td>
+					  {{-- <td>
 						{{$subscription->type}}
-					  </td>
+					  </td> --}}
 					  <td>
 						{{$subscription->user_id}}
 					  </td>
 					  <td>
 						{{$subscription->consultation_id}}
 					  </td>
-					  <td>
+					  {{-- <td>
 						{{$subscription->total_price}}
-					  </td>
+					  </td> --}}
 					  <td>
 						{{$subscription->created_at}}
 					  </td>

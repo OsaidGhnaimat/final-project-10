@@ -13,14 +13,14 @@
 			  <h4 class="card-title">Manage Subscription</h4>
 			  <form class="forms-sample" action="{{ route('subscription.store') }}" method="POST" enctype="multipart/form-data" >
 				@csrf
-				<div class="form-group" style="width:300px;">
+				{{-- <div class="form-group" style="width:300px;">
 				  <label for="type">Subscription Type</label>
 				  <select name="type" id="type" class="custom-select">
 					  <option value="monthly">Monthly</option>
 					  <option value="once">Once</option>
 				  </select>
 
-				</div>
+				</div> --}}
 				<div class="form-group" style="width:300px;">
 				  <label for="consultation_id">Consultation</label>
 				  <select name="consultation_id" id="consultation_id" class="custom-select">
@@ -29,10 +29,10 @@
 					@endforeach
 				</select>				
 			  </div>
-				<div class="form-group" style="width:300px;">
+				{{-- <div class="form-group" style="width:300px;">
 				  <label for="total_price">Total Price</label>
 				  <input type="number" class="form-control" id="total_price" name="total_price" placeholder="total_price">
-				</div>
+				</div> --}}
 
 				  <div class="form-group " style="width:300px;">
 					<label for="user_id">User</label>

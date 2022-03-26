@@ -26,5 +26,8 @@ class RoleSeeder extends Seeder
          Role::create([
             'role_name'=>"admin",
          ]);
+         Role::create([
+            'role_name'=>"expert",
+         ]);
     }
 }

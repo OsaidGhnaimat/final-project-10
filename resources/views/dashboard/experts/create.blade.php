@@ -11,8 +11,14 @@
 		  <div class="card">
 			<div class="card-body">
 			  <h4 class="card-title">Manage Expert</h4>
-			  <form class="forms-sample" action="{{ route('expert.store') }}" method="POST" enctype="multipart/form-data" >
+			  @if($errors->any())
+							<div class="alert alert-danger text-center" role="alert">
+								{{ $errors->first() }}
+							</div>
+						@endif
+			  <form class="forms-sample" action="{{ route('expertd.store') }}" method="POST" enctype="multipart/form-data" >
 				@csrf
+				<input type="hidden" name="role_id" value="3">
 				<div class="form-group">
 				  <label for="expert_name">Name</label>
 				  <input type="text" class="form-control" id="expert_name" name="expert_name" placeholder="expert_name">
@@ -37,10 +43,10 @@
 					<label for="experience">Experience</label>
 					<textarea class="form-control" id="experience" name="experience" rows="4" maxlength="250"></textarea>
 				  </div>
-				  <div class="form-group">
+				  {{-- <div class="form-group">
 					<label for="price_per_hours">Price Per Hours</label>
 					<input type="number" class="form-control" id="price_per_hours" name="price_per_hours" rows="4"> 
-				  </div>
+				  </div> --}}
 				  <div class="form-group">
 					<label>Expert image</label>
 					<input type="file" name="expert_img" class="file-upload-default">

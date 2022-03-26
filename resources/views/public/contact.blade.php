@@ -42,25 +42,26 @@
                     <div class="col-md-7">
                         <div class="contact-form">
                             <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <form action="{{route('contact.store')}}" method="POST"  >
+                                @csrf
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required"/>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="required"  />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="required" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Message" required="required" ></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div>
-                                    <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                                    <button class="btn" type="submit" >Send Message</button>
                                 </div>
                             </form>
                         </div>

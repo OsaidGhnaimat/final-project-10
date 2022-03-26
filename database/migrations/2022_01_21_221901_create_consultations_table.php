@@ -18,18 +18,19 @@ class CreateConsultationsTable extends Migration
             $table->string('consultation_name');
             $table->string('consultation_img')->nullable();
             $table->string('title');
+            $table->string('price');
             $table->text('description');
             // $table->foreignId('user_id')->constrained();
             $table->foreignId('expert_id')
-            ->unsigned()
-            ->references('id')
-            ->on('experts')
-            ->onDelete('cascade');
+                ->unsigned()
+                ->references('id')
+                ->on('experts')
+                ->onDelete('cascade');
             $table->foreignId('category_id')
-            ->unsigned()
-            ->references('id')
-            ->on('categories')
-            ->onDelete('cascade');
+                ->unsigned()
+                ->references('id')
+                ->on('categories')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

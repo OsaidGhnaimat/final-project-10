@@ -35,12 +35,14 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
-    // to check auth and redirect according that **********
+    // to check auth and redirect according that ********** 
     protected function redirectTo(){
         if(Auth()->user()->role_id == 2){
-            return route('user.index');
-        }else{
+            return route('dashHome');
+        }elseif(Auth()->user()->role_id == 1){
             return route('home');
+        }elseif(Auth()->user()->role_id == 3){
+            return route('public.expertProfile');
         }
     }
 

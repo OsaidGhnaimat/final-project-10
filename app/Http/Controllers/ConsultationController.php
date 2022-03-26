@@ -43,6 +43,7 @@ class ConsultationController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         if($request->hasFile('consultation_img')){
             $file = $request->consultation_img;
             $new_file = time() . $file->getClientOriginalName();
@@ -51,6 +52,7 @@ class ConsultationController extends Controller
         Consultation::create([
             'consultation_name'  => $request->consultation_name,
             'title'              => $request->title,
+            'price'              => $request->price,
             'description'        => $request->description,
             'expert_id'          => $request->expert_id,
             'category_id'        => $request->category_id,
@@ -103,11 +105,28 @@ class ConsultationController extends Controller
         }
         $consultationUpdate->consultation_name     = $request->consultation_name;
         $consultationUpdate->title           = $request->title;
+        $consultationUpdate->price           = $request->price;
         $consultationUpdate->description           = $request->description;
         $consultationUpdate->category_id        = $request->category_id ;
         $consultationUpdate->expert_id        = $request->expert_id ;
         $consultationUpdate->update();
         return redirect()->route('consultation.index');
+    }
+
+
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+    
+        // Search in the title and body columns from the posts table
+        $posts = Consultation::query()
+            ->where('consultation_name', 'LIKE', "%{$search}%")
+            ->orWhere('title', 'LIKE', "%{$search}%")
+            ->orWhere('description', 'LIKE', "%{$search}%")
+            ->get();
+    
+        // Return the search view with the resluts compacted
+        return view('public/search', compact('posts'));
     }
 
     /**
@@ -122,4 +141,6 @@ class ConsultationController extends Controller
         $destroyConsultation->destroy($id);
         return redirect()->route('consultation.index');
     }
+
+
 }

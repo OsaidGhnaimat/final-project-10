@@ -26,6 +26,7 @@
 					  <th>Title</th>
 					  <th>Description</th>
 					  <th>Expert Name</th>
+					  <th>Price per hour</th>
 					  <th>Category Name</th>
 					  <th>Date</th>
 					  <th>Setting</th>
@@ -53,6 +54,9 @@
 					  </td>
 					  <td>
 						{{$consultation->expert->expert_name}}
+					  </td>
+					  <td>
+						{{$consultation->price}}
 					  </td>
 					  <td>
 						{{$consultation->category->category_name}}

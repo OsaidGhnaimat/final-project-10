@@ -22,7 +22,17 @@ class CreateExpertsTable extends Migration
             $table->text('bio');
             $table->text('certifications');
             $table->text('experience');
-            $table->string('price_per_hours');
+
+            $table->string('user_id')->nullable();
+
+            $table->foreignId('role_id')
+            ->unsigned()
+            ->references('id')
+            ->on('roles')
+            ->onDelete('cascade')
+            ->default('3');
+
+            // $table->string('price_per_hours');
             $table->timestamps();
         });
     }

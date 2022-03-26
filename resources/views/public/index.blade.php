@@ -16,8 +16,9 @@
                                 Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn" href=""><i class="fa fa-link"></i>Get Started</a>
-                                <a class="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=dySCHZuTzqU" data-target="#videoModal"><i class="fa fa-play"></i>Watch Video</a>
+                                <a href="{{route('service')}}"><button class="home-btn">Our Services</button></a>
+                                {{-- <a class="btn" href=""><i class="fa fa-link"></i>Get Started</a>
+                                <a class="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=dySCHZuTzqU" data-target="#videoModal"><i class="fa fa-play"></i>Watch Video</a> --}}
                             </div>
                         </div>
                     </div>
@@ -31,8 +32,9 @@
                                 Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn" href=""><i class="fa fa-link"></i>Get Started</a>
-                                <a class="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=dySCHZuTzqU" data-target="#videoModal"><i class="fa fa-play"></i>Watch Video</a>
+                                <a href="{{route('service')}}"><button class="home-btn">Our Services</button></a>
+                                {{-- <a class="btn" href=""><i class="fa fa-link"></i>Get Started</a>
+                                <a class="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=dySCHZuTzqU" data-target="#videoModal"><i class="fa fa-play"></i>Watch Video</a> --}}
                             </div>
                         </div>
                     </div>
@@ -46,8 +48,9 @@
                                 Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn" href=""><i class="fa fa-link"></i>Get Started</a>
-                                <a class="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=dySCHZuTzqU" data-target="#videoModal"><i class="fa fa-play"></i>Watch Video</a>
+                                <a href="{{route('service')}}"><button class="home-btn">Our Services</button></a>
+                                {{-- <a class="btn" href=""><i class="fa fa-link"></i>Get Started</a>
+                                <a class="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=dySCHZuTzqU" data-target="#videoModal"><i class="fa fa-play"></i>Watch Video</a> --}}
                             </div>
                         </div>
                     </div>
@@ -159,7 +162,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -169,7 +171,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -179,7 +180,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -189,7 +189,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -199,7 +198,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -209,7 +207,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -219,7 +216,6 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -229,7 +225,7 @@
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
                             </p>
-                            <a href="">Read More</a>
+                            {{-- <a href="">Read More</a> --}}
                         </div>
                     </div>
                 </div>
@@ -244,7 +240,7 @@
                 <div class="row align-items-end">
                     <div class="col-md-6">
                         <div class="feature-img">
-                            <img src="img/business-man.png" alt="Image">
+                            <img src="img/mypic.png" alt="Image">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -259,29 +255,29 @@
                             <div class="col-6">
                                 <i class="fa fa-user"></i>
                                 <div class="counters-text">
-                                    <h2 data-toggle="counter-up">100</h2>
+                                    <h2 data-toggle="counter-up">{{$countExpert}}</h2>
                                     <p>Our Staffs</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <i class="fa fa-users"></i>
                                 <div class="counters-text">
-                                    <h2 data-toggle="counter-up">200</h2>
+                                    <h2 data-toggle="counter-up">{{$countUser}}</h2>
                                     <p>Our Clients</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <i class="fa fa-check"></i>
                                 <div class="counters-text">
-                                    <h2 data-toggle="counter-up">300</h2>
-                                    <p>Completed Projects</p>
+                                    <h2 data-toggle="counter-up">{{$countSubscription}}</h2>
+                                    <p>Subscriptions</p>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <i class="fa fa-running"></i>
                                 <div class="counters-text">
-                                    <h2 data-toggle="counter-up">400</h2>
-                                    <p>Running Projects</p>
+                                    <h2 data-toggle="counter-up">{{$countConsultation}}</h2>
+                                    <p>Consultations available</p>
                                 </div>
                             </div>
                         </div>
@@ -435,7 +431,7 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Our Head Office</h3>
-                                <p>123 Street, New York, USA</p>
+                                <p>123 Street, Al-Salt, Jordan</p>
                             </div>
                         </div>
                         <div class="contact-info">
@@ -444,7 +440,7 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Call for Help</h3>
-                                <p>+012 345 6789</p>
+                                <p>0777748150</p>
                             </div>
                         </div>
                         <div class="contact-info">
@@ -453,32 +449,33 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Email for Information</h3>
-                                <p>info@example.com</p>
+                                <p>osaid.ghnaimat@gmail.com</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-7">
                         <div class="contact-form">
                             <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <form action="{{route('contact.store')}}" method="POST"  >
+                                @csrf
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required"/>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="required"  />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="required" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Message" required="required" ></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div>
-                                    <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                                    <button class="btn" type="submit" >Send Message</button>
                                 </div>
                             </form>
                         </div>
@@ -493,8 +490,8 @@
         <div class="blog">
             <div class="container">
                 <div class="section-header">
-                    <p>Consulting Blog</p>
-                    <h2>Latest From Our Consulting Blog</h2>
+                    <p>Consulting </p>
+                    <h2>Latest Feedback From Our Consulting </h2>
                 </div>
                 <div class="owl-carousel blog-carousel">
                     <div class="blog-item">
@@ -505,15 +502,14 @@
                             <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
                             <div class="blog-meta">
                                 <i class="fa fa-list-alt"></i>
-                                <a href="">Category</a>
+                                <i class="text-secondary">Marketing</i>
                                 <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
+                                <p>01-Jan-2022</p>
                             </div>
                             <div class="blog-text">
                                 <p>
                                     Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
                                 </p>
-                                <a class="btn" href="">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -525,15 +521,14 @@
                             <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
                             <div class="blog-meta">
                                 <i class="fa fa-list-alt"></i>
-                                <a href="">Category</a>
+                                <i class="text-secondary">Human Resource</i>
                                 <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
+                                <p>01-Jan-2020</p>
                             </div>
                             <div class="blog-text">
                                 <p>
                                     Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
                                 </p>
-                                <a class="btn" href="">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -545,15 +540,14 @@
                             <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
                             <div class="blog-meta">
                                 <i class="fa fa-list-alt"></i>
-                                <a href="">Category</a>
+                                <i class="text-secondary">Business Strategy</i>
                                 <i class="fa fa-calendar-alt"></i>
-                                <p>01-Jan-2045</p>
+                                <p>01-Jan-2018</p>
                             </div>
                             <div class="blog-text">
                                 <p>
                                     Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
                                 </p>
-                                <a class="btn" href="">Read More</a>
                             </div>
                         </div>
                     </div>

@@ -11,7 +11,7 @@
 		  <div class="card">
 			<div class="card-body">
 			  <h4 class="card-title">Manage Expert</h4>
-				<a href="{{route('expert.create')}}"> 
+				<a href="{{route('expertd.create')}}"> 
 				<button class="btn btn-outline-success btn-fw">
 					Add User
 			  </button>
@@ -38,9 +38,9 @@
 					  <th>
 						experience
 					  </th>
-					  <th>
+					  {{-- <th>
 						price_per_hours
-					  </th>
+					  </th> --}}
 					  <th>
 						SignUp Date
 					  </th>
@@ -71,9 +71,9 @@
 					  <td>
 						{{$expert->experience}}
 					  </td>
-					  <td>
+					  {{-- <td>
 						{{$expert->price_per_hours}}
-					  </td>
+					  </td> --}}
 					  <td>
 						{{$expert->created_at}}
 					  </td>
@@ -82,8 +82,8 @@
 							<a href="{{route('user.edit', $user->id)}}"><i class="mdi mdi-lead-pencil iconStyle iconE"></i></a>
 						</div> --}}
 
-						<form action="{{route('expert.destroy',$expert->id)}}" method="post">
-							<a href="{{route('expert.edit',$expert->id)}}" data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="mdi mdi-lead-pencil iconStyle iconE"></i></a>
+						<form action="{{route('expertd.destroy',$expert->id)}}" method="post">
+							<a href="{{route('expertd.edit',$expert->id)}}" data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="mdi mdi-lead-pencil iconStyle iconE"></i></a>
 
 								@csrf
 								@method('Delete')

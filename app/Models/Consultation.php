@@ -13,10 +13,12 @@ class Consultation extends Model
         'consultation_name',
         'consultation_img',
         'title',
+        'price',
         'description',
         'expert_id',
         'category_id'
     ];
+    
 
     // public function user(){
     //     return $this->hasMany(User::class); ////////////////*****////////// */
@@ -30,8 +32,8 @@ class Consultation extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function Subscription(){
-        return $this->hasMany(Subscription::class); 
+    public function subscription(){
+        return $this->belongsToMany(Subscription::class, 'Subscription'); 
     }
 
     public function comment() {

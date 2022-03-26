@@ -37,16 +37,27 @@
                 <div>
                     <a href="{{route('home')}}" class="navbar-brand">Confer</a>
                 </div>
+                <form class="form-inline" action="{{ route('searchPublic') }}" method="GET">
+                    <input class="form-control search-bar-public mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
+                    <button class="btn  search-bnt-public my-2 my-sm-0" type="submit">Search</button>
+                </form>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto ">
                         <a href="{{route('home')}}" class="nav-item nav-link active">Home</a>
                         <a href="{{route('about')}}" class="nav-item nav-link">About</a>
                         <a href="{{route('service')}}" class="nav-item nav-link">Service</a>
-                        <a href="{{route('review')}}" class="nav-item nav-link">Review</a>
+                        {{-- <a href="{{route('review')}}" class="nav-item nav-link">Review</a> --}}
                         <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
+                        {{-- @if (Auth::user()->role_id !=3) --}}
+                        <a href="{{route('indexRegisterExpert')}}" class="nav-item nav-link">Join Us</a>
+                        {{-- @endif --}}
                             @if (Auth::check())
+                            @if (Auth::user()->role_id ==1)
                             <a href="{{route('public.userProfile')}}" class="nav-item nav-link">Profile</a>
+                            @else
+                            <a href="{{route('public.expertProfile')}}" class="nav-item nav-link">Profile</a>
+                            @endif
                             @endif
                         @guest
                         @if (Route::has('login'))

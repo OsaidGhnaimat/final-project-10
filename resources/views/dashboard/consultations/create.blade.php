@@ -26,13 +26,17 @@
 				  <textarea type="text" class="form-control" id="description" name="description" placeholder="description"> </textarea>
 				</div>
 
-				<div class="form-group" style="width:200px;" >
+					<div class="form-group" style="width:200px;" >
 					<label for="category_id">Category</label>
 					<select name="category_id" id="category_id" class="custom-select">
 						@foreach ($categories as $category)
 							<option value="{{$category->id}}">{{$category->category_name}}</option>
 						@endforeach
 					</select>
+				  </div>
+				  <div class="form-group">
+					<label for="price">Price per hour</label>
+					<input type="text" class="form-control" id="price" name="price" placeholder="price">
 				  </div>
 				  <div class="form-group " style="width:200px;">
 					<label for="expert_id">Expert</label>

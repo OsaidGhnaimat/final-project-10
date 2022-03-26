@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Subscription;
 use App\Models\Consultation;
 use App\Models\User;
@@ -32,7 +33,7 @@ class SubscriptionController extends Controller
     {
         $consultations = Consultation::all();
         $users = User::all();
-        return view('dashboard.subscriptions.create', compact('consultations','users'));
+        return view('dashboard.subscriptions.create', compact('consultations', 'users'));
     }
 
     /**
@@ -45,9 +46,9 @@ class SubscriptionController extends Controller
     {
         // dd($request);
         Subscription::create([
-            'type'             => $request->type,
-            'total_price'      => $request->total_price,
-            // 'user_id'          => $request->user_id,
+            // 'type'             => $request->type,
+            // 'total_price'      => $request->total_price,
+            'user_id'          => $request->user_id,
             'consultation_id'  => $request->consultation_id,
         ]);
         return redirect()->route('subscription.index');
@@ -87,13 +88,39 @@ class SubscriptionController extends Controller
     {
         $subscriptionUpdate = Subscription::find($id);
 
-        $subscriptionUpdate->type            = $request->type;
-        $subscriptionUpdate->total_price     = $request->total_price;
-        // $subscriptionUpdate->user_id         = $request->user_id;
-        $subscriptionUpdate->consultation_id = $request->consultation_id ;
+        // $subscriptionUpdate->type            = $request->type;
+        // $subscriptionUpdate->total_price     = $request->total_price;
+        $subscriptionUpdate->user_id         = $request->user_id;
+        $subscriptionUpdate->consultation_id = $request->consultation_id;
         $subscriptionUpdate->update();
         return redirect()->route('subscription.index');
     }
+
+    public function toCheckOute($id)
+    {
+        $consultation = Consultation::find($id);
+        return view('public.checkOut', compact('consultation'));
+    }
+
+    public function subscriptionBooking(Request $request)
+    {
+        $request->validate([
+            'fname' => 'required',
+            'cardname' => 'required',
+            'cardnumber' => 'required|min:16',
+            'expmonth' => 'required',
+            'expyear' => 'required',
+            'cvv' => 'required',
+        ]);
+        Subscription::create([
+            "consultation_id" => $request->consultation_id,
+            "user_id"         => $request->user_id,
+        ]);
+
+        return view('public.bookSuccess');
+    }
+
+
 
     /**
      * Remove the specified resource from storage.
@@ -106,5 +133,13 @@ class SubscriptionController extends Controller
         $destroySubscription = Subscription::find($id);
         $destroySubscription->destroy($id);
         return redirect()->route('subscription.index');
+    }
+
+
+    public function showSubscriptions()
+    {   
+        $subscriptions = Subscription::where();
+        $users = User::all();
+        return view('dashboard.subscriptions.create', compact('consultations', 'users'));
     }
 }

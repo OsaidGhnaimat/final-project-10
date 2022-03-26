@@ -1,10 +1,10 @@
-@extends('layouts.app')
-
+@extends('public/layout/master')
+    
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-md-8 my-5">
+            <div class="card login-style">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -53,15 +53,17 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-login ">
                                     {{ __('Login') }}
                                 </button>
+                                <div class="already-login">I am not registered? <a class="ling-register" href="{{ route('register') }}">{{ __('Register') }}</a> </div>
 
-                                @if (Route::has('password.request'))
+
+                                {{-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                @endif --}}
                             </div>
                         </div>
                     </form>

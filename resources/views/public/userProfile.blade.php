@@ -1,6 +1,8 @@
 @extends('public/layout/master')
 @section('content')
         <!-- Fact Start -->
+		<div class="container-profil d-flex">
+
 		<div class=" col-6 sec-banner bg0 p-t-150 p-b-50">
 			<div class="container m-auto justify-content-center ">
 				<div class="row  m-auto justify-content-center ">
@@ -19,7 +21,7 @@
 					{{ $errors->first() }}
 				</div>
 			  @endif
-					<form action="{{route('userProfileUpdate',["id" => $user->id])}}" method="post" enctype="multipart/form-data">
+					<form class="form-profil-user" action="{{route('userProfileUpdate',["id" => $user->id])}}" method="post" enctype="multipart/form-data">
 						{{ csrf_field() }}
 						{{ method_field('put') }}
 						<div class=" mb-3  ">
@@ -52,12 +54,27 @@
 			</div>
 		</div>
 
-		<div class="userProfile-subscriptions col-6">
-			<div class="row  m-auto justify-content-center ">
-				
+		<div class="col-6 userProfile-subscriptions ">
+			<div class="row">
+				<h1 class="head-profil">My Subscriptions : </h1>
+				@foreach ($Subscriptions as $Subscription)
+					<div class="subscribtions-card d-flex ">
+						<img src="{{ asset($Subscription->consultation->consultation_img) }}" alt="image">
+						
+						<div class="d-flex flex-column justify-content-center">
+							<div><h3>{{ $Subscription->consultation->consultation_name }}</h3></div>
+							<div><p>Expert Name : {{$Subscription->consultation->expert->expert_name}}</p></div>
+							<div><p>Booking Date : {{ $Subscription->created_at->format('d:m:y h:m') }}</p></div>
+							
+						</div>
+					</div>
+				@endforeach
+
 			</div>
 
 		</div>
 		
+	</div>
+
 
 @endsection

@@ -20,11 +20,7 @@ class Subscription extends Model
         return $this->belongsTo(Consultation::class); 
     }
 
-    // public function user(){
-    //     return $this->belongsTo(User::class); 
-    // }
-
      public function user(){
-        return $this->belongsToMany(User::class, 'subscription_user'); 
+        return $this->belongsTo(User::class, 'subscription_user'); 
     }
 }

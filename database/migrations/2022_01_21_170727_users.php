@@ -21,6 +21,7 @@ class Users extends Migration
             $table->string('password'); 
             $table->string('user_img')->nullable();
             $table->rememberToken();
+            
             $table->timestamps();
             
             $table->foreignId('role_id')

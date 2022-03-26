@@ -14,22 +14,19 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'expert_name'=>'user1',
-            'email'=>'user1@gmail.com',
-            'password'=>123,
+            'user_name'=>'user',
+            'email'=>'user@gmail.com',
+            'password'=>bcrypt(123),
+            'user_img'=>'./uploads/1647643520A6CE561B-BEF8-455F-9DAD-1D51CAC309D1.jpg',
             'role_id'=>1
         ]);
         User::create([
-            'expert_name'=>'user2',
-            'email'=>'user2@gmail.com',
-            'password'=>123,
-            'role_id'=>1
+            'user_name'=>'admin',
+            'email'=>'admin@gmail.com',
+            'password'=>bcrypt(123),
+            'user_img'=>'./uploads/1647643520A6CE561B-BEF8-455F-9DAD-1D51CAC309D1.jpg',
+            'role_id'=>2
         ]);
-        User::create([
-            'expert_name'=>'user3',
-            'email'=>'user3@gmail.com',
-            'password'=>123,
-            'role_id'=>1
-        ]);
+        
     }
 }
